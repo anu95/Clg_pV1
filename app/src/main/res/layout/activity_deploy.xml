@@ -11,22 +11,26 @@
     tools:context="com.example.dell.mobility_v1.Deploy">
 
     <FrameLayout
-        android:layout_width="170dp"
-        android:layout_height="270dp"
+        android:layout_width="250dp"
+        android:layout_height="390dp"
         android:foregroundGravity="center_vertical"
-        android:background="@drawable/pmd_cover"
+        android:background="@drawable/pmdblank"
         android:id="@+id/now_deploying"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true">
 
-        <ImageButton
+        <ToggleButton
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center"
-            android:src="@drawable/ic_play_arrow_24dp"
-            android:backgroundTint="@color/transp"
-            />
+            android:id="@+id/pl_pa"
+            android:textOff=""
+            android:textOn=""
+
+            android:background="@drawable/toggle_pp"
+
+            android:checked="true" />
 
     </FrameLayout>
 </RelativeLayout>
