@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
-import util.OnSwipeTouchListener;
+import com.example.dell.mobility_v1.util.OnSwipeTouchListener;
 
 public class Briefing extends AppCompatActivity {
 

@@ -40,16 +40,13 @@ import android.widget.ListView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
-import com.example.dell.mobility_v1.recycler.adapters.Game;
-import com.example.dell.mobility_v1.recycler.adapters.GamesAdapter;
 import com.example.dell.mobility_v1.recycler.DividerItemDecoration;
-import com.example.dell.mobility_v1.viewpagers.Main;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import util.OnSwipeTouchListener;
-import util.RecyclerTouchListener;
+import com.example.dell.mobility_v1.util.OnSwipeTouchListener;
+import com.example.dell.mobility_v1.util.RecyclerTouchListener;
 
 public class Workspace extends AppCompatActivity implements  TaskListener{
     Main m;
@@ -639,7 +636,7 @@ switch(v.getId())
 //        Log.d("click","Textclick.........................................");
 //        textwatch();
 //    }
-    List<Game> gameList;
+    List<Test_Item> testItemList;
     RecyclerView recyclerView;
     GamesAdapter mAdapter;
 //    ContactAdapterR cA;List<Contact> cl;
@@ -706,13 +703,13 @@ switch(v.getId())
     private boolean initRecycle()
 {
     try{
-        gameList = new ArrayList<>();
+        testItemList = new ArrayList<>();
         recyclerView = (RecyclerView) findViewById(R.id.recycle_list);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
 
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-        mAdapter=  new GamesAdapter(gameList);
+        mAdapter=  new GamesAdapter(testItemList);
         recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
 
         recyclerView.setAdapter(mAdapter);
@@ -724,7 +721,7 @@ switch(v.getId())
 
             @Override
             public void onLongClick(View view, int position) {
-                Game movie = gameList.get(position);
+                Test_Item movie = testItemList.get(position);
                 Toast.makeText(getApplicationContext(), movie.getName() + " is selected!", Toast.LENGTH_SHORT).show();
             }
         }));
@@ -825,38 +822,38 @@ switch(v.getId())
 
 
 
-       Game game = new Game("Mad Max: Fury Road", "Action & Adventure", "2015");
-        gameList.add(game);
-
-        game = new Game("Inside Out", "Animation, Kids & Family", "2015");
-        gameList.add(game);
-
-        game = new Game("Star Wars: Episode VII - The Force Awakens", "Action", "2015");
-        gameList.add(game);
-
-        game = new Game("Shaun the Sheep", "Animation", "2015");
-        gameList.add(game);
-
-        game = new Game("The Martian", "Science Fiction & Fantasy", "2015");
-        gameList.add(game);
-
-        game = new Game("Mission: Impossible Rogue Nation", "Action", "2015");
-        gameList.add(game);
-
-        game = new Game("Up", "Animation", "2009");
-        gameList.add(game);
-
-        game = new Game("Star Trek", "Science Fiction", "2009");
-        gameList.add(game);
-
-        game = new Game("The LEGO Movie", "Animation", "2014");
-        gameList.add(game);
-
-        game = new Game("Iron Man", "Action & Adventure", "2008");
-        gameList.add(game);
-
-        game = new Game("Aliens", "Science Fiction", "1986");
-        gameList.add(game);
+//       Test_Item testItem = new Test_Item("Mad Max: Fury Road", "Action & Adventure", "2015");
+//        testItemList.add(testItem);
+//
+//        testItem = new Test_Item("Inside Out", "Animation, Kids & Family", "2015");
+//        testItemList.add(testItem);
+//
+//        testItem = new Test_Item("Star Wars: Episode VII - The Force Awakens", "Action", "2015");
+//        testItemList.add(testItem);
+//
+//        testItem = new Test_Item("Shaun the Sheep", "Animation", "2015");
+//        testItemList.add(testItem);
+//
+//        testItem = new Test_Item("The Martian", "Science Fiction & Fantasy", "2015");
+//        testItemList.add(testItem);
+//
+//        testItem = new Test_Item("Mission: Impossible Rogue Nation", "Action", "2015");
+//        testItemList.add(testItem);
+//
+//        testItem = new Test_Item("Up", "Animation", "2009");
+//        testItemList.add(testItem);
+//
+//        testItem = new Test_Item("Star Trek", "Science Fiction", "2009");
+//        testItemList.add(testItem);
+//
+//        testItem = new Test_Item("The LEGO Movie", "Animation", "2014");
+//        testItemList.add(testItem);
+//
+//        testItem = new Test_Item("Iron Man", "Action & Adventure", "2008");
+//        testItemList.add(testItem);
+//
+//        testItem = new Test_Item("Aliens", "Science Fiction", "1986");
+//        testItemList.add(testItem);
 
 
 

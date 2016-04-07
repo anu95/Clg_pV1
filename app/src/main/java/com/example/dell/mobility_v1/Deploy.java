@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.RelativeLayout;
 
-import util.OnSwipeTouchListener;
+import com.example.dell.mobility_v1.util.OnSwipeTouchListener;
 
 public class Deploy extends AppCompatActivity {
 

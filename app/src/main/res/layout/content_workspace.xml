@@ -37,7 +37,7 @@ android:background="@color/white"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="0.65"
-        android:padding="5dp"
+        android:padding="8dp"
 
         android:layout_marginLeft="-6dp"
 
